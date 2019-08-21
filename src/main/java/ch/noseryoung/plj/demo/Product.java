@@ -5,7 +5,9 @@ public class Product {
 	private int price;
 	private boolean isVeggi;
 	
-	
+	public Product(){
+		
+	}
 	
 	public Product(String productName, int price, boolean isVeggi) {
 		super();
