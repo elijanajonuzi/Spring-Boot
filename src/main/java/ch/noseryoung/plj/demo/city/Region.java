@@ -15,7 +15,7 @@ public Region(ArrayList<City> cities) {
 }
 
 
-protected void addCity(long id, String name, int population) {
+/*protected void addCity(long id, String name, int population) {
 	cities.add(new City(id,name,population));
 }
 
@@ -53,7 +53,8 @@ protected String printCities() {
 		return city.toString();
 	}
 	return "Hello";
-}
+} 
+*/
 
 
 
