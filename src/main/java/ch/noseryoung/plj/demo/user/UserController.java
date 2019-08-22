@@ -1,4 +1,4 @@
-package ch.noseryoung.plj.demo;
+package ch.noseryoung.plj.demo.user;
 
 import java.util.ArrayList;
 
@@ -17,14 +17,17 @@ public class UserController {
 
 //General Formula localhost:8080/[parentMapping]/[endpointMapping]	
 //Our first Get Mapping
-@GetMapping()
-public @ResponseBody ResponseEntity<User> getHelloWorld(@PathVariable long id){
+@GetMapping({"/{elijana}",""})
+public @ResponseBody ResponseEntity<User> getHelloWorld(@PathVariable("elijana") long id){
 	ArrayList<String> collection = new ArrayList<String>();
 	collection.add("sdsd");
 	collection.add("sdsd2");
 	return new ResponseEntity<User>(new User("Sina","Blattmann",id,collection),HttpStatus.OK);
 }
 
+//OK , CREATED , OK , NO_CONTENT 
+
+//get 1 entity, get all entities, create 1 entity, update 1 entity, delete 1 entity 
 
 
 

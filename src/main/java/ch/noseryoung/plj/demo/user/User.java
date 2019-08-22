@@ -1,4 +1,4 @@
-package ch.noseryoung.plj.demo;
+package ch.noseryoung.plj.demo.user;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package ch.noseryoung.plj.demo;
+package ch.noseryoung.plj.demo.product;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +20,12 @@ public class ProductController {
 	}
 	
 	@PostMapping("/giveproduct")
-	public @ResponseBody ResponseEntity<String> addProduct(@RequestBody Product product){
+	public @ResponseBody ResponseEntity<String> addProduct(@RequestBody Product product){ //annotation
 		return new ResponseEntity<String>(product.getProductName(),HttpStatus.OK);
 	}
+	
+
+	
 	
 
 }

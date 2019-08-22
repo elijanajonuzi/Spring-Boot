@@ -1,4 +1,4 @@
-package ch.noseryoung.plj.demo;
+package ch.noseryoung.plj.demo.product;
 
 public class Product {
 	private String productName;
@@ -6,7 +6,6 @@ public class Product {
 	private boolean isVeggi;
 	
 	public Product(){
-		
 	}
 	
 	public Product(String productName, int price, boolean isVeggi) {
