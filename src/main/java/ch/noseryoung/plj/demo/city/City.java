@@ -9,6 +9,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+/**
+ * City Class 
+ * @author Elijana
+ *
+ */
 @Entity
 @Table(name = "city")
 public class City {

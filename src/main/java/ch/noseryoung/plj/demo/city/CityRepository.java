@@ -11,6 +11,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+
+/**
+ * Repository Layer
+ * 
+ * @author Elijana
+ *
+ */
 @Repository
 public interface CityRepository extends JpaRepository<City, Long> {
 	@Query(value="Select * from city where city.population>= ?1",nativeQuery=true)
