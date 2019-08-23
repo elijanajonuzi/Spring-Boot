@@ -1,6 +1,6 @@
 package ch.noseryoung.plj.demo.city;
 
-import java.awt.List;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -40,26 +40,36 @@ public class RegionController {
 		return new ResponseEntity<Optional<City>>(city,HttpStatus.OK);
 	}
 	@GetMapping("/listCity")
-	public @ResponseBody ResponseEntity<ArrayList<City>> getAllCities(){
-		regionService
-		return new ResponseEntity<ArrayList<City>>(regionService.getRegion().cities,HttpStatus.OK);
+	public @ResponseBody ResponseEntity<List<City>> getAllCities(){
+			return new ResponseEntity<List<City>>(regionService.getAllCities(),HttpStatus.OK);
 	}
+	@GetMapping("/{id}/population")
+	public @ResponseBody ResponseEntity<Integer> getCityPopulation(@PathVariable long id){
+		Optional<City> city=regionService.getCityPopulationById(id);
+		return new ResponseEntity<Integer>(city.get().getPopulation(),HttpStatus.OK);
+	}
+	@GetMapping("/{id}/name")
+	public @ResponseBody ResponseEntity<String> getCityName(@PathVariable long id){
+		Optional<City> city=regionService.getCityNameById(id);
+		return new ResponseEntity<String>(city.get().getName(),HttpStatus.OK);
+	}
+	@GetMapping("/where/{population}")
+	public @ResponseBody ResponseEntity<List<City>> getCitiesByPopulation(@PathVariable int population){
+		return new ResponseEntity<List<City>>(regionService.gettAllCitiesByPopulation(population),HttpStatus.OK);
+	}
+	
 	@PutMapping("/update/{idToChange}")
 	public @ResponseBody ResponseEntity<String> updateCity(@RequestBody City city, @PathVariable long idToChange){
-		if(regionService.updateCity(idToChange, city)) {
+		regionService.updateCity(idToChange, city);
 			return new ResponseEntity<String> ("OK",HttpStatus.OK);	
-	}
-		return new ResponseEntity<String> ("Not existing", HttpStatus.BAD_REQUEST);
-		
 	}
 	
 	@DeleteMapping("/delete/{idCity}")
 	public @ResponseBody ResponseEntity<String> deleteCity(@PathVariable long idCity){
-		if(regionService.deleteCity(idCity)) {
-			return new ResponseEntity<String>("OK",HttpStatus.OK);
-		}
-		return new ResponseEntity<String>("Not Existing",HttpStatus.OK);
+		regionService.deleteCity(idCity);
+			return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
 	}
+	
 	
 	
 	

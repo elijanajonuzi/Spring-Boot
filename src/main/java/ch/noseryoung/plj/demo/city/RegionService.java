@@ -1,5 +1,6 @@
 package ch.noseryoung.plj.demo.city;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,51 +35,41 @@ public class RegionService {
 	}
 	
 	protected void addCity(City city) {
-		region.cities.add(new City(city.getId(),city.getName(),city.getPopulation()));
+	long id= city.getId();
+	String name= city.getName();
+	int population= city.getPopulation();
+	City newCity=new City(id,name,population);
+	cityrepository.save(newCity);
 	}
 	
-	protected boolean deleteCity(long id) {
-		addRandomCity();
-		for (int index=0; index<region.cities.size();index++) {
-			if(region.cities.get(index).getId()==id) {
-				region.cities.remove(index);
-				return true;
-			}
-		
-		}
-		return false;
-		
-		
+	protected void deleteCity(long id) {
+		cityrepository.deleteById(id);
 	}
 	
 	protected Optional<City> getCityFromDB(long id){
 		return cityrepository.findById(id);
 	}
 	
-	protected 
+	protected Optional<City> getCityPopulationById(long id) {
+		return cityrepository.findById(id);
+	}
+	protected Optional<City> getCityNameById(long id) {
+		return cityrepository.findById(id);
+	}
+	protected List<City> getAllCities(){
+		return cityrepository.findAll();
+	}
+	
+	protected List<City> gettAllCitiesByPopulation(int population){
+		return (List<City>) cityrepository.selectCityWithPopulation(population);
+	}
 	
 	
 
-protected boolean updateCity(long idToChange,City city) {
-	addRandomCity();
-	for (int index=0; index<region.cities.size();index++) {
-		if(region.cities.get(index).getId()==idToChange) {
-			region.cities.get(index).setId(city.getId());
-			region.cities.get(index).setName(city.getName());
-			region.cities.get(index).setPopulation(city.getPopulation());
-			return true;
-		}
-	}
-	return false;
-	
+protected void updateCity(long idToChange,City city) {
+	cityrepository.save(new City(idToChange,city.getName(),city.getPopulation()));
 }
 
-protected String printCities() {
-	for (City city : region.cities) {
-		return city.toString();
-	}
-	return "Hello";
-}
 
 protected void addRandomCity() {
 	region.cities.add(new City(100,"Bern",2000));
@@ -87,8 +78,6 @@ protected void addRandomCity() {
 	
 }
 
-	
-
 	public Region getRegion() {
 		return region;
 	}
@@ -96,11 +85,4 @@ protected void addRandomCity() {
 	public void setRegion(Region region) {
 		this.region = region;
 	}
-	
-	
-
-	
-	
-	
-	
 }
