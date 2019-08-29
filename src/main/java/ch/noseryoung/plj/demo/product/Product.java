@@ -2,13 +2,13 @@ package ch.noseryoung.plj.demo.product;
 
 public class Product {
 	private String productName;
-	private int price;
+	private long price;
 	private boolean isVeggi;
 	
 	public Product(){
 	}
 	
-	public Product(String productName, int price, boolean isVeggi) {
+	public Product(String productName, long price, boolean isVeggi) {
 		super();
 		this.productName = productName;
 		this.price = price;
@@ -21,10 +21,10 @@ public class Product {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public int getPrice() {
+	public long getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(long price) {
 		this.price = price;
 	}
 	public boolean isVeggi() {

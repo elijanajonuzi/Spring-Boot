@@ -1,18 +1,72 @@
 package ch.noseryoung.plj.demo.city;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.CascadeType;
+
+@Entity
+@Table(name = "region")
 public class Region {
-ArrayList<City> cities=new ArrayList<City>();
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
+	private long id;
+	
+	
+	@Column(name="name")
+	private String name;
+	
+	@OneToMany(mappedBy ="region")
+	private List<City> region; 
+	
 
 public Region() {
 	
 }
 
-public Region(ArrayList<City> cities) {
+
+
+public Region(long id, String name) {
 	super();
-	this.cities = cities;
+	this.id = id;
+	this.name = name;
 }
+
+
+
+public long getId() {
+	return id;
+}
+
+public void setId(long id) {
+	this.id = id;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+
+
 
 
 /*protected void addCity(long id, String name, int population) {
@@ -59,21 +113,11 @@ protected String printCities() {
 
 
 
-public ArrayList<City> getCities() {
-	return cities;
-}
 
-public void setCities(ArrayList<City> cities) {
-	this.cities = cities;
-}
 
-@Override
-public String toString() {
-	for (City city : cities) {
-		city.toString();
-	}
-	return "Region [cities=" + cities + "]";
-}
+
+
+
 
 
 

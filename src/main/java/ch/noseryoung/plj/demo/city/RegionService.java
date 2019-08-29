@@ -65,9 +65,18 @@ public class RegionService {
 	protected List<City> getAllCities(){
 		return cityrepository.findAll();
 	}
+	protected List<City> getAllCitiesInRegion(long id){
+		return cityrepository.selectCityWithRegion(id);
+	}
+	protected List<City> getAllCitiesInRegionID(long id){
+		return cityrepository.selectCityWithRegionID(id);
+	}
 	
 	protected List<City> gettAllCitiesByPopulation(int population){
 		return (List<City>) cityrepository.selectCityWithPopulation(population);
+	}
+	protected List<City> getAllCitiesWithRegion(){
+		return (List<City>) cityrepository.findAll();
 	}
 	
 	
@@ -77,12 +86,12 @@ protected void updateCity(long idToChange,City city) {
 }
 
 
-protected void addRandomCity() {
+/*protected void addRandomCity() {
 	region.cities.add(new City(100,"Bern",2000));
 	region.cities.add(new City(77,"Rome", 60));
 	region.cities.add(new City(88,"Ehi", 890));
 	
-}
+}*/
 
 	public Region getRegion() {
 		return region;

@@ -1,12 +1,22 @@
 package ch.noseryoung.plj.demo.city;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
@@ -20,8 +30,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class City {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private long id;
+	@Column(name = "id_city")
+	private long id_city;
 	
 	@Column(name= "name")
 	private String name;
@@ -29,7 +39,16 @@ public class City {
 	@Column(name="population")
 	private int population;
 	
-	
+	 @ManyToOne(
+	          fetch = FetchType.EAGER,
+	          optional = false
+	  )
+	  @JoinColumn(
+	          name = "region_id",
+	          nullable = false
+	  )
+	 @JsonIgnore
+	private Region region;
 	
 	public City() {
 	}
@@ -38,7 +57,7 @@ public class City {
 
 	public City(long id, String name, int population) {
 		super();
-		this.id = id;
+		this.id_city = id;
 		this.name = name;
 		this.population = population;
 	}
@@ -47,11 +66,11 @@ public class City {
 
 
 	public long getId() {
-		return id;
+		return id_city;
 	}
 
 	public void setId(long id) {
-		this.id = id;
+		this.id_city = id;
 	}
 
 	public String getName() {
@@ -74,7 +93,7 @@ public class City {
 
 	@Override
 	public String toString() {
-		return "City [id=" + id + ", name=" + name + ", population=" + population + "]";
+		return "City [id=" + id_city + ", name=" + name + ", population=" + population + "]";
 	}
 	
 	

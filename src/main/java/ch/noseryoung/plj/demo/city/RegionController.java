@@ -124,6 +124,20 @@ public class RegionController {
 			return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
 	}
 	
+	@GetMapping("/listCity/{idToList}")
+	public @ResponseBody ResponseEntity<List<City>> getAllCitiesInRegion(@PathVariable long idToList){
+			return new ResponseEntity<List<City>>(regionService.getAllCitiesInRegion(idToList),HttpStatus.OK);
+	}
+	
+	@GetMapping("/listbyRegion/{idRegion}")
+		public @ResponseBody ResponseEntity<List<City>> getAllCitiesInRegionID(@PathVariable long idRegion){
+			return new ResponseEntity<List<City>>(regionService.getAllCitiesInRegionID(idRegion),HttpStatus.OK);
+	}
+	@GetMapping("/listAll")
+	public @ResponseBody ResponseEntity<List<City>> listAllCities(){
+		return new ResponseEntity<List<City>>(regionService.getAllCitiesWithRegion(),HttpStatus.OK);
+}
+	
 	
 	
 	
