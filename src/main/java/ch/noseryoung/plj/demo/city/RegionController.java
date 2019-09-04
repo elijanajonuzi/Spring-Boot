@@ -136,6 +136,7 @@ public class RegionController {
 	@GetMapping("/listAll")
 	public @ResponseBody ResponseEntity<List<City>> listAllCities(){
 		return new ResponseEntity<List<City>>(regionService.getAllCitiesWithRegion(),HttpStatus.OK);
+		
 }
 	
 	

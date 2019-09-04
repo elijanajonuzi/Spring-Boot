@@ -86,6 +86,7 @@ protected void updateCity(long idToChange,City city) {
 }
 
 
+
 /*protected void addRandomCity() {
 	region.cities.add(new City(100,"Bern",2000));
 	region.cities.add(new City(77,"Rome", 60));
