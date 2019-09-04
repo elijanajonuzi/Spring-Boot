@@ -1,0 +1,23 @@
+
+Vch.noseryoung.plj.demo.city.RegionService#getCityPopulationById(J)Ljava/util/Optional;b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.java: :(/"1*’
+1b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.java;	 ;(â
+ß
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.java;	 ;(0
+%0*ch.noseryoung.plj.demo.city.CityRepository"__id*A*?+
+)ch.noseryoung.plj.demo.city.RegionService"
+cityrepositoryÀ½
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.java;	 ;($
+%1java.util.Optional"corg.springframework.data.repository.CrudRepository#findById(Ljava/lang/Object;)Ljava/util/Optional;*2
+0
+%0*ch.noseryoung.plj.demo.city.CityRepository*
+""2findById(Ljava/lang/Object;)"€
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.java; ;(%
+
+%1java.util.Optional:
+""B-+
+)ch.noseryoung.plj.demo.city.RegionService

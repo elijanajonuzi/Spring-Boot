@@ -1,0 +1,39 @@
+
+ech.noseryoung.plj.demo.city.RegionController#listAllCities()Lorg/springframework/http/ResponseEntity;g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.java‰1 ‰(>"1*Þ
+1g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ( Š(5è
+å
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ( Š(5/
+%0)ch.noseryoung.plj.demo.city.RegionService"__id*C*A.
+,ch.noseryoung.plj.demo.city.RegionController"
+regionService£ 
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ( Š(N
+%1java.util.List"Rch.noseryoung.plj.demo.city.RegionService#getAllCitiesWithRegion()Ljava/util/List;*1
+/
+%0)ch.noseryoung.plj.demo.city.RegionService2getAllCitiesWithRegion()¥
+¢
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠO Š(\)
+%2#org.springframework.http.HttpStatus"__id*
+""ÄÁ
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ Š('-
+%3'org.springframework.http.ResponseEntity"'org.springframework.http.ResponseEntityÒ
+Ï
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ	 Š(]
+%4"horg.springframework.http.ResponseEntity#<init>(Ljava/lang/Object;Lorg/springframework/http/HttpStatus;)V*/
+-
+%3'org.springframework.http.ResponseEntity*
+
+%1java.util.List*+
+)
+%2#org.springframework.http.HttpStatus"š
+g
+[C:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionController.javaŠ Š(^/
+-
+%3'org.springframework.http.ResponseEntityB0.
+,ch.noseryoung.plj.demo.city.RegionController

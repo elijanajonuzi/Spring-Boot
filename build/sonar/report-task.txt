@@ -1,0 +1,7 @@
+organization=elijanajonuzi
+projectKey=elijanajonuzi_Spring-Boot
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.485
+dashboardUrl=https://sonarcloud.io/dashboard?id=elijanajonuzi_Spring-Boot
+ceTaskId=AWz7xj4rtQ64eu94OCFe
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWz7xj4rtQ64eu94OCFe

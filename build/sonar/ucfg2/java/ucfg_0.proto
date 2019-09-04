@@ -1,0 +1,60 @@
+
+ach.noseryoung.plj.demo.SwaggerConfig#taskApi()Lspringfox/documentation/spring/web/plugins/Docket;]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java ("1*µ
+1]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (+¥
+¢
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (53
+%0-springfox.documentation.spi.DocumentationType"__id*
+""ÎË
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (7
+%11springfox.documentation.spring.web.plugins.Docket"1springfox.documentation.spring.web.plugins.DocketÆ
+Ã
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (6
+%2"jspringfox.documentation.spring.web.plugins.Docket#<init>(Lspringfox/documentation/spi/DocumentationType;)V*9
+7
+%11springfox.documentation.spring.web.plugins.Docket*5
+3
+%0-springfox.documentation.spi.DocumentationTypeçä
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (C
+%3=springfox.documentation.spring.web.plugins.ApiSelectorBuilder"yspringfox.documentation.spring.web.plugins.Docket#select()Lspringfox/documentation/spring/web/plugins/ApiSelectorBuilder;*9
+7
+%11springfox.documentation.spring.web.plugins.Docket2select()ª
+§
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (/&
+%4 com.google.common.base.Predicate"`springfox.documentation.builders.RequestHandlerSelectors#any()Lcom/google/common/base/Predicate;*<":
+8springfox.documentation.builders.RequestHandlerSelectorsêç
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (0C
+%5=springfox.documentation.spring.web.plugins.ApiSelectorBuilder"¥springfox.documentation.spring.web.plugins.ApiSelectorBuilder#apis(Lcom/google/common/base/Predicate;)Lspringfox/documentation/spring/web/plugins/ApiSelectorBuilder;*E
+C
+%3=springfox.documentation.spring.web.plugins.ApiSelectorBuilder*(
+&
+%4 com.google.common.base.Predicate2(apis(Lcom/google/common/base/Predicate;)–
+“
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (&&
+%6 com.google.common.base.Predicate"Vspringfox.documentation.builders.PathSelectors#any()Lcom/google/common/base/Predicate;*2"0
+.springfox.documentation.builders.PathSelectorsìé
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java ('C
+%7=springfox.documentation.spring.web.plugins.ApiSelectorBuilder"¦springfox.documentation.spring.web.plugins.ApiSelectorBuilder#paths(Lcom/google/common/base/Predicate;)Lspringfox/documentation/spring/web/plugins/ApiSelectorBuilder;*E
+C
+%5=springfox.documentation.spring.web.plugins.ApiSelectorBuilder*(
+&
+%6 com.google.common.base.Predicate2)paths(Lcom/google/common/base/Predicate;)åâ
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (7
+%81springfox.documentation.spring.web.plugins.Docket"xspringfox.documentation.spring.web.plugins.ApiSelectorBuilder#build()Lspringfox/documentation/spring/web/plugins/Docket;*E
+C
+%7=springfox.documentation.spring.web.plugins.ApiSelectorBuilder2build()"š
+]
+SC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\SwaggerConfig.java (9
+7
+%81springfox.documentation.spring.web.plugins.DocketB(&
+$ch.noseryoung.plj.demo.SwaggerConfig

@@ -1,0 +1,21 @@
+
+Rch.noseryoung.plj.demo.city.RegionService#getAllCitiesWithRegion()Ljava/util/List;b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaM M(,"1*⁄
+1b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaN N($‚
+ﬂ
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaN N($0
+%0*ch.noseryoung.plj.demo.city.CityRepository"__id*A*?+
+)ch.noseryoung.plj.demo.city.RegionService"
+cityrepositoryçä
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaN N(.
+%1java.util.List"Oorg.springframework.data.jpa.repository.JpaRepository#findAll()Ljava/util/List;*2
+0
+%0*ch.noseryoung.plj.demo.city.CityRepository2	findAll()"|
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaN N(/
+
+%1java.util.ListB-+
+)ch.noseryoung.plj.demo.city.RegionService

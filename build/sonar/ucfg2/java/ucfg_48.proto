@@ -1,0 +1,23 @@
+
+Sch.noseryoung.plj.demo.city.RegionService#getAllCitiesInRegionID(J)Ljava/util/List;b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaF F(,"1*÷
+1b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaG	 G(â
+ß
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaG	 G(0
+%0*ch.noseryoung.plj.demo.city.CityRepository"__id*A*?+
+)ch.noseryoung.plj.demo.city.RegionService"
+cityrepositoryª§
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaG	 G(2
+%1java.util.List"Tch.noseryoung.plj.demo.city.CityRepository#selectCityWithRegionID(J)Ljava/util/List;*2
+0
+%0*ch.noseryoung.plj.demo.city.CityRepository*
+""2selectCityWithRegionID(J)"|
+b
+XC:\work\Source-Eclipse\demo\src\main\java\ch\noseryoung\plj\demo\city\RegionService.javaG G(3
+
+%1java.util.List:
+""B-+
+)ch.noseryoung.plj.demo.city.RegionService

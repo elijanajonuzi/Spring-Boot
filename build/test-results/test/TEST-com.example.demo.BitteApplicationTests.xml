@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo.BitteApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-04T10:15:55" hostname="EMazikeen" time="0.002">
+  <properties/>
+  <testcase name="contextLoads" classname="com.example.demo.BitteApplicationTests" time="0.002"/>
+  <system-out><![CDATA[2019-09-04 12:15:53.348  INFO 7932 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.BitteApplicationTests], using SpringBootContextLoader
+2019-09-04 12:15:53.349  INFO 7932 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.BitteApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-09-04 12:15:53.349  INFO 7932 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.BitteApplicationTests]: BitteApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-09-04 12:15:53.353  INFO 7932 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.BitteApplication for test class com.example.demo.BitteApplicationTests
+2019-09-04 12:15:53.355  INFO 7932 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-09-04 12:15:53.356  INFO 7932 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@397a4940, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@386b1c5e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3bb12552, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@b487b4b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6093132b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@fa7a8b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32534473, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7a09e351, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2fbad70, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5186b186, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@79de0719, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4cf86018, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1337c4da, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77d95dbb]
+
+                        _  _                            
+ _ __ ___    __ _  ____(_)| | __ ___ __   __ ___  _ __  
+| '_ ` _ \  / _` ||_  /| || |/ // _ \\ \ / // _ \| '_ \ 
+| | | | | || (_| | / / | ||   <|  __/ \ V /|  __/| | | |
+|_| |_| |_| \__,_|/___||_||_|\_\\___|  \_/  \___||_| |_|
+              
+              
+              
+              
+2019-09-04 12:15:53.380  INFO 7932 --- [    Test worker] com.example.demo.BitteApplicationTests   : Starting BitteApplicationTests on EMazikeen with PID 7932 (started by Elijana in C:\work\Source-Eclipse\demo)
+2019-09-04 12:15:53.380  INFO 7932 --- [    Test worker] com.example.demo.BitteApplicationTests   : No active profile set, falling back to default profiles: default
+2019-09-04 12:15:53.607  INFO 7932 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-04 12:15:53.607  INFO 7932 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 repository interfaces.
+2019-09-04 12:15:53.725  INFO 7932 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5cbf05b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-04 12:15:53.806  INFO 7932 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-09-04 12:15:53.877  INFO 7932 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-09-04 12:15:53.899  INFO 7932 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-04 12:15:53.906  INFO 7932 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-09-04 12:15:53.979  INFO 7932 --- [    Test worker] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-09-04 12:15:53.979  INFO 7932 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2b3c9849
+2019-09-04 12:15:54.002  INFO 7932 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-04 12:15:54.386  INFO 7932 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-04 12:15:54.400  WARN 7932 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-04 12:15:54.802  INFO 7932 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: febbf4cb-ebf3-4c45-85e2-5efd9c29933e
+
+2019-09-04 12:15:55.027  INFO 7932 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a2fb23d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f0a8a49, org.springframework.security.web.header.HeaderWriterFilter@417e4539, org.springframework.security.web.csrf.CsrfFilter@75d5b345, org.springframework.security.web.authentication.logout.LogoutFilter@619bdba7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@21339dfe, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2bb23a21, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@9a8d0cc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@406c8919, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43d4b66d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@124c4900, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d728fcd, org.springframework.security.web.session.SessionManagementFilter@2d54b13, org.springframework.security.web.access.ExceptionTranslationFilter@6d36121a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40cc4598]
+2019-09-04 12:15:55.107  INFO 7932 --- [    Test worker] com.example.demo.BitteApplicationTests   : Started BitteApplicationTests in 1.749 seconds (JVM running for 9.606)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
