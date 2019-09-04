@@ -10,7 +10,7 @@ plugins {
 
 sonarqube {
   properties {
-    property "sonar.projectKey: elijanajonuzi_Spring-Boot"
+    property 'sonar.projectKey', 'elijanajonuzi_Spring-Boot'
   }
 }
 
