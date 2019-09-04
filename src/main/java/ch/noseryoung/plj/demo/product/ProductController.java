@@ -23,13 +23,13 @@ public class ProductController {
 	@GetMapping("/{id}")
 	@ApiOperation("Gets the Product with specific id")
 	public @ResponseBody ResponseEntity<Product> getProduct(@PathVariable long id){
-		return new ResponseEntity<Product>(new Product("Product1",id,true),HttpStatus.OK);
+		return new ResponseEntity<>(new Product("Product1",id,true),HttpStatus.OK);
 	}
 	
 	@PostMapping("/giveproduct")
 	
 	public @ResponseBody ResponseEntity<String> addProduct(@RequestBody Product product){ //annotation
-		return new ResponseEntity<String>(product.getProductName(),HttpStatus.OK);
+		return new ResponseEntity<>(product.getProductName(),HttpStatus.OK);
 	}
 	
 

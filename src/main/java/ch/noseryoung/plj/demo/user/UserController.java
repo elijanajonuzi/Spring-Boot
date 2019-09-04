@@ -19,15 +19,12 @@ public class UserController {
 //Our first Get Mapping
 @GetMapping({"/{elijana}",""})
 public @ResponseBody ResponseEntity<User> getHelloWorld(@PathVariable("elijana") long id){
-	ArrayList<String> collection = new ArrayList<String>();
+	ArrayList<String> collection = new ArrayList<>();
 	collection.add("sdsd");
 	collection.add("sdsd2");
-	return new ResponseEntity<User>(new User("Sina","Blattmann",id,collection),HttpStatus.OK);
+	return new ResponseEntity<>(new User("Sina","Blattmann",id,collection),HttpStatus.OK);
 }
 
-//OK , CREATED , OK , NO_CONTENT 
-
-//get 1 entity, get all entities, create 1 entity, update 1 entity, delete 1 entity 
 
 
 

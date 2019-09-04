@@ -29,7 +29,6 @@ public class RegionService {
 	
 	
 	public RegionService() {
-		//addRandomCity();
 	}
 
 	public RegionService(Region region) {
@@ -71,10 +70,10 @@ public class RegionService {
 	}
 	
 	protected List<City> gettAllCitiesByPopulation(int population){
-		return (List<City>) cityrepository.selectCityWithPopulation(population);
+		return  cityrepository.selectCityWithPopulation(population);
 	}
 	protected List<City> getAllCitiesWithRegion(){
-		return (List<City>) cityrepository.findAll();
+		return cityrepository.findAll();
 	}
 	
 	
@@ -84,13 +83,6 @@ protected void updateCity(long idToChange,City city) {
 }
 
 
-
-/*protected void addRandomCity() {
-	region.cities.add(new City(100,"Bern",2000));
-	region.cities.add(new City(77,"Rome", 60));
-	region.cities.add(new City(88,"Ehi", 890));
-	
-}*/
 
 	public Region getRegion() {
 		return region;

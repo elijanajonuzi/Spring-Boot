@@ -57,69 +57,6 @@ public void setName(String name) {
 }
 
 
-
-
-
-/*protected void addCity(long id, String name, int population) {
-	cities.add(new City(id,name,population));
-}
-
-protected boolean deleteCity(long id) {
-	for (int index=0; index<cities.size();index++) {
-		if(cities.get(index).getId()==id) {
-			cities.remove(index);
-			return true;
-		}
-	
-	}
-	return false;
-	
-	
-}
-
-protected boolean updateCity(long idToChange,  String name,int population) {
-	for (int index=0; index<cities.size();index++) {
-		if(cities.get(index).getId()==idToChange) {
-			cities.get(index).setPopulation(population);
-			return true;
-		}
-	}
-	return false;
-	
-}
-
-protected void addRandomCity() {
-	//cities.add(new City(100,"Bern",2000));
-	cities.add(new City(77,"Rome", 60));
-	cities.add(new City(88,"Ehi", 890));
-}
-protected String printCities() {
-	for (City city : cities) {
-		return city.toString();
-	}
-	return "Hello";
-} 
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
