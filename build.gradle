@@ -1,4 +1,5 @@
 plugins {
+	id "org.sonarqube" version "2.7.1"
 	id 'org.springframework.boot' version '2.1.7.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
@@ -18,3 +19,5 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//testImplementation 'org.springframework.security:spring-security-test'
 }
+
+
