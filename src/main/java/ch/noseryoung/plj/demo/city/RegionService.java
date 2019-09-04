@@ -1,13 +1,10 @@
 package ch.noseryoung.plj.demo.city;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import ch.noseryoung.plj.demo.city.dto.CityDTO;
 /**
  * 
  * Service Layer
