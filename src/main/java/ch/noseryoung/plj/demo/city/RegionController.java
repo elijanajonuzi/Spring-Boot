@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.noseryoung.plj.demo.city.dto.CityDTO;
+import ch.noseryoung.plj.demo.city.dto.CityMapper;
+
 /**
  * Web Layer 
  * 
@@ -31,7 +34,7 @@ public class RegionController {
 	
 
 	private RegionService regionService;
-	
+	private CityMapper cityMapper;
 	@Autowired
 	public RegionController(RegionService regionService) {
 		this.regionService = regionService;
@@ -42,9 +45,9 @@ public class RegionController {
 	 * @return ResponseEntity with the name of the city that was added
 	 */
 	@PostMapping("/addCity")
-	public @ResponseBody ResponseEntity<String> addCity(@RequestBody City city){
-		regionService.addCity(city);
-		return new ResponseEntity<String>(city.getName(),HttpStatus.CREATED);
+	public @ResponseBody ResponseEntity<String> addCity(@RequestBody CityDTO city){
+		regionService.addCity(cityMapper.fromDTO(city));
+		return new ResponseEntity<>(city.getName(),HttpStatus.CREATED);
 	}
 	
 	/**
@@ -56,7 +59,7 @@ public class RegionController {
 	@GetMapping("/{id}")
 	public @ResponseBody ResponseEntity<Optional<City>> getCity(@PathVariable long id ){
 		Optional<City> city=regionService.getCityFromDB(id);
-		return new ResponseEntity<Optional<City>>(city,HttpStatus.OK);
+		return new ResponseEntity<>(city,HttpStatus.OK);
 	}
 	/**
 	 * 
@@ -64,7 +67,7 @@ public class RegionController {
 	 */
 	@GetMapping("/listCity")
 	public @ResponseBody ResponseEntity<List<City>> getAllCities(){
-			return new ResponseEntity<List<City>>(regionService.getAllCities(),HttpStatus.OK);
+			return new ResponseEntity<>(regionService.getAllCities(),HttpStatus.OK);
 	}
 	
 	/**
@@ -75,7 +78,12 @@ public class RegionController {
 	@GetMapping("/{id}/population")
 	public @ResponseBody ResponseEntity<Integer> getCityPopulation(@PathVariable long id){
 		Optional<City> city=regionService.getCityPopulationById(id);
-		return new ResponseEntity<Integer>(city.get().getPopulation(),HttpStatus.OK);
+		int population=0;
+		
+		if(city.isPresent()) {
+			population=city.get().getPopulation();
+		}
+		return new ResponseEntity<>(population,HttpStatus.OK);
 	}
 	
 	/**
@@ -85,8 +93,12 @@ public class RegionController {
 	 */
 	@GetMapping("/{id}/name")
 	public @ResponseBody ResponseEntity<String> getCityName(@PathVariable long id){
+		String name="";
 		Optional<City> city=regionService.getCityNameById(id);
-		return new ResponseEntity<String>(city.get().getName(),HttpStatus.OK);
+		if(city.isPresent()) {
+			name=city.get().getName();
+		}
+		return new ResponseEntity<>(name,HttpStatus.OK);
 	}
 	/**
 	 * 
@@ -96,7 +108,7 @@ public class RegionController {
 	
 	@GetMapping("/where/{population}")
 	public @ResponseBody ResponseEntity<List<City>> getCitiesByPopulation(@PathVariable int population){
-		return new ResponseEntity<List<City>>(regionService.gettAllCitiesByPopulation(population),HttpStatus.OK);
+		return new ResponseEntity<>(regionService.gettAllCitiesByPopulation(population),HttpStatus.OK);
 	}
 	
 	/**
@@ -107,9 +119,9 @@ public class RegionController {
 	 */
 	
 	@PutMapping("/update/{idToChange}")
-	public @ResponseBody ResponseEntity<String> updateCity(@RequestBody City city, @PathVariable long idToChange){
-		regionService.updateCity(idToChange, city);
-			return new ResponseEntity<String> ("OK",HttpStatus.OK);	
+	public @ResponseBody ResponseEntity<String> updateCity(@RequestBody CityDTO city, @PathVariable long idToChange){
+		regionService.updateCity(idToChange, cityMapper.fromDTO(city));
+			return new ResponseEntity<> ("OK",HttpStatus.OK);	
 	}
 	
 	/**
@@ -121,21 +133,21 @@ public class RegionController {
 	@DeleteMapping("/delete/{idCity}")
 	public @ResponseBody ResponseEntity<String> deleteCity(@PathVariable long idCity){
 		regionService.deleteCity(idCity);
-			return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
 	@GetMapping("/listCity/{idToList}")
 	public @ResponseBody ResponseEntity<List<City>> getAllCitiesInRegion(@PathVariable long idToList){
-			return new ResponseEntity<List<City>>(regionService.getAllCitiesInRegion(idToList),HttpStatus.OK);
+			return new ResponseEntity<>(regionService.getAllCitiesInRegion(idToList),HttpStatus.OK);
 	}
 	
 	@GetMapping("/listbyRegion/{idRegion}")
 		public @ResponseBody ResponseEntity<List<City>> getAllCitiesInRegionID(@PathVariable long idRegion){
-			return new ResponseEntity<List<City>>(regionService.getAllCitiesInRegionID(idRegion),HttpStatus.OK);
+			return new ResponseEntity<>(regionService.getAllCitiesInRegionID(idRegion),HttpStatus.OK);
 	}
 	@GetMapping("/listAll")
 	public @ResponseBody ResponseEntity<List<City>> listAllCities(){
-		return new ResponseEntity<List<City>>(regionService.getAllCitiesWithRegion(),HttpStatus.OK);
+		return new ResponseEntity<>(regionService.getAllCitiesWithRegion(),HttpStatus.OK);
 		
 }
 	
